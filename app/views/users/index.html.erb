@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Users</h1>
+<h3>
+Active:
+<%= @users.active.count %>
+</h3>
+<h3>
+Disabled:
+<%= @users.disabled.count %>
+</h3>
+
+<%= render partial: "user", collection: @users %>
