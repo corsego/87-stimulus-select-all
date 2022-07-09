@@ -1,5 +1,5 @@
 <div id="<%= dom_id user %>" style="background-color: silver; max-width: 50%">
-  <%= check_box_tag "user_ids[]", user.id, nil, { multiple: true, form: :bulk_actions_form } %>
+  <%= check_box_tag "user_ids[]", user.id, nil, { multiple: true, form: :bulk_actions_form, data: { checkbox_select_all_target: "child", action: "change->checkbox-select-all#toggleParent"} } %>
   <p>
     <strong>Email:</strong>
     <%= user.email %>
