@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  resources :users
+  resources :users do
+    collection do
+      patch :bulk_update
+    end
+  end
   root 'users#index'
 end

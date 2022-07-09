@@ -10,4 +10,8 @@ Disabled:
 <%= @users.disabled.count %>
 </h3>
 
+<%= form_with url: bulk_update_users_path, method: :patch, id: :bulk_actions_form do |form| %>
+  <%= form.submit "active" %>
+  <%= form.submit "disabled" %>
+<% end %>
 <%= render partial: "user", collection: @users %>
